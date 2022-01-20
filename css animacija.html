@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Css animacija </title>
+    <style>
+        body {
+            background: #050210;
+        }
+.box {
+    position: relative;
+    margin: 150px 600px;
+}
+.circle {
+    position: absolute;
+    margin: 30px auto;
+    width: 600px;
+    height: 600px;
+    border-radius: 100%;
+    background-image: linear-gradient(to bottom, #fb5dad,#55fb9f,#b97aff);
+    animation: my-animation 1s linear infinite ;
+}
+.circle::before {
+ position: absolute;
+ content: '';
+ width: 490px;
+ height: 490px;
+ top: 70px;
+ bottom: 70px;
+ left: 55px;
+ right: 70px;
+ margin: auto;
+ border-radius: 100%;
+ background:#050210;
+}
+ .circle::after {
+    content: '';
+    position: absolute;
+    background:  #0b0520;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    top: 70px;
+    bottom: 70px;
+    right:70px;
+    left:55px;
+    margin: auto;
+     animation: ping 1.5s linear infinite;
+ } 
+
+@keyframes my-animation {
+    0% {
+  transform: rotate(0deg);
+    }
+    100% {
+  transform: rotate(360deg);
+    }
+}
+
+@keyframes ping {
+    0% {
+        width: 0px;
+        height: 0px;
+    }
+    100% {
+        width: 490px;
+        height: 490px;
+    }
+
+        
+}
+.bl {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    margin: 30px auto;
+    background-image: linear-gradient(to bottom, #fb5dad,#55fb9f,#b97aff);
+    filter: blur(80px);
+    z-index: -1;
+    animation: my-animation 1s linear infinite ;
+} 
+
+    </style>
+</head>
+<body>
+<div class="box">
+
+<div class="circle"></div>
+<div class="bl"></div>
+ </div>
+</body>
+</html>
