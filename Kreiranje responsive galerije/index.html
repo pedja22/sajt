@@ -1,0 +1,118 @@
+<html>
+    <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    box-sizing: border-box;
+}
+
+body {
+    max-width: 1025px;
+width: 100%;
+margin: 0 auto;
+font-size: 20px;
+}
+
+#grid-galerija {
+padding: 20px;
+ width: 100%;
+
+display: grid;
+grid-template-columns: repeat(5, 100px);
+grid-template-rows: repeat(2,100px);
+grid-gap: 25px;
+text-align: center;
+
+}
+.box {
+   background-image: url(pi.png);
+  background-color:dodgerblue ;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-radius: 10%;
+ min-height: 40px;
+ min-width: 40px;
+  
+}
+.box .title {
+    
+    background:white;    
+    text-align: center;
+    font-size: 15px;
+    border-radius: 10%;
+    border: 1px solid;
+    margin-top: 85%;
+    margin-bottom: 0%;
+}
+h1 {
+    margin-left: 5%;
+    text-decoration:none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+p {
+    font-size: 1em;
+}
+
+
+@media screen and (max-width: 1024px) {
+    #grid-galerija {
+        grid-template-columns: repeat(5, 100px);
+grid-template-rows: repeat(2,100px);
+    }
+    p {
+        font-size: 1em;
+    }
+}
+ 
+@media screen and (max-width: 768px) {
+    #grid-galerija {
+        grid-template-columns: repeat(3, 100px);
+        grid-template-rows: repeat(4,100px);
+}
+p {
+        font-size: 0.8em;
+    } 
+}
+ 
+@media screen and (max-width: 414px) {
+    #grid-galerija {
+        grid-template-columns: repeat(1, 100px);
+        
+   
+} p {
+        font-size: 0.6em;
+    }
+
+ }
+</style>
+
+    </head>
+    <body>
+<h1>Gallery Heading</h1>
+<div id="grid-galerija">
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+    <div class="box"><div class="title">Image Title</div></div>
+</div>
+
+<p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit neque magna, a tincidunt dolor faucibus vel. Etiam cursus turpis ac enim ultricies malesuada.<br>
+     Etiam at quam non ligula fringilla tristique vel et purus. Integer vel dui at libero laoreet consequat. Donec tincidunt, <br>
+    tellus eget cursus molestie, turpis nisl tempor eros, ac porttitor quam urna vitae leo. Pellentesque finibus iaculis nulla eget pharetra.<br>
+     Maecenas a mauris metus. In eget venenatis velit. Morbi ac quam nec erat sagittis scelerisque.<br>
+      Donec facilisis est id congue consequat. Proin justo risus, finibus non dui vestibulum, interdum ullamcorper enim.<br>
+      Integer vulputate ipsum a mi aliquam tincidunt. Sed quis condimentum erat. Duis a nibh id tortor cursus tempus.
+
+</p>
+
+    </body>
+</html>
